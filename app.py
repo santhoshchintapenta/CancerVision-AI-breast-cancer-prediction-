@@ -5,7 +5,11 @@ import joblib
 import random
 
 # ===================== LOAD MODEL =====================
-model = joblib.load("breast_cancer_pipeline.pkl")
+try:
+    model = joblib.load("breast_cancer_pipeline.pkl")
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+    st.stop()
 
 # ===================== PAGE CONFIG =====================
 st.set_page_config(
