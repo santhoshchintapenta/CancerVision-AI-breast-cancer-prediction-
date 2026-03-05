@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "outputDirectory": ".streamlit",
+  "framework": "streamlit",
+  "python": "3.11"
+}
